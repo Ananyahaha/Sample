@@ -1,0 +1,96 @@
+
+
+<body>
+
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg'); background-repeat:repeat;">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+    
+
+    <H1>Sign Up</H1>
+        <form [formGroup]= "ReactiveLogin">
+            
+                 <div class="wrap-input100 validate-input">
+                
+                    <div>
+                        <p>
+                            <label for= "username">Enter Name:</label>
+                            <input class="input100" type="text" id="username"name="username" formControlName="name"  />
+                        </p>
+                        <div *ngIf="!name?.valid">
+                            <div *ngIf="name?.errors?.required && (name?.dirty ||name?.touched)">
+                                 Name is mandatory
+                            </div>                       
+                            
+                        </div>
+                        <br>
+                        <p>
+                            <label for= "email">Enter Email:</label>
+                            <input class="input100" type="text" id="email"name="email" formControlName="email"   />
+                        </p>
+                        <div *ngIf="!email?.valid">
+                            <div *ngIf="email?.errors?.required && (email?.dirty ||email?.touched)">
+                                 Email is mandatory
+                            </div>
+                            
+                            <div *ngIf="email?.errors?.pattern">
+                                Email ID should have @
+                            </div>
+                            
+                        </div>
+                        <br>
+                    
+                        <p>
+                            <label for= "contact">Contact No:</label>
+                            <input class="input100" type="text" id="contact"name="contact" formControlName="contact"  />
+                        </p>
+                        <div *ngIf="!contact?.valid">
+                            <div *ngIf="contact!.errors?.required && (contact?.dirty ||contact?.touched)">
+                                 Contact is mandatory
+                            </div>
+                            <div *ngIf="contact!.errors?.minlength">
+                                Contact should be of 10 digits
+                                </div>
+                                
+                        </div>
+                        <br>
+                        <p>
+                            <label for= "password">Enter Password:</label>
+                            <input class="input100" type="password" id="password"name="password" formControlName="pwd"  />
+                        </p>
+                        <div *ngIf="pwd?.errors?.required && (pwd?.dirty ||pwd?.touched)">
+                            Password is mandatory.
+                        </div>
+                       
+                        <div *ngIf="pwd!.errors?.minlength">
+                            Password should be of 8 digits
+                            </div>
+                            
+                        <div *ngIf="pwd?.errors?.pattern">
+                            Password should contain atleast one number and one letter.
+                        </div>		
+                        <br>
+                        <p>
+                            <input class="input100" type="password" id="Cpassword"name="Cpassword" formControlName="cwd"  placeholder="Confirm Password again"/>
+                        </p>
+                        <div *ngIf="cwd?.errors?.required && (cwd?.dirty ||cwd?.touched)">
+                            Mandatory Field
+                        </div>
+                        <br>
+                        
+                        <div class="container-login100-form-btn">
+                            <p>
+                             <button type="button" class ="login100-form-btn"[disabled]="!ReactiveLogin.valid" (click) = "Check()" >Submit</button>
+                             </p>
+                         </div>
+                          
+    
+    
+                    </div>
+    
+        </div>
+        </form>
+        </div>
+        

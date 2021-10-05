@@ -1,0 +1,54 @@
+<body>
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg'); background-repeat:repeat;">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+<h1>LOGIN</h1>
+
+<div class="box1">
+    <form [formGroup]= "ReactiveLogin">            
+            
+    <div>
+            
+    <div class="login100-form-title">
+        
+    </div>
+<div class="wrap-input100 validate-input">
+
+    <label for= "email">Email ID</label><br>
+    <input class="input100" type="text" id="email"name="email" formControlName="email" placeholder="Email ID" style = "width: 300px;"/>
+        <div *ngIf="!email?.valid">
+        <div *ngIf="email?.errors?.required && (email?.dirty ||email?.touched)">
+             Email is mandatory
+        </div>
+    <div *ngIf="email?.errors?.pattern">
+            Email ID should have @
+    </div>
+</div>
+</div>
+      <br>  
+<div class="wrap-input100 validate-input">
+            
+    <label for= "password">Password</label><br>
+
+            <input class = "input100" type="password" id="pasword" name="password" formControlName="pwd" placeholder="Password"/>
+            
+                        <div *ngIf="pwd?.errors?.required && (pwd?.dirty ||pwd?.touched)">
+                            Password is mandatory.
+                        </div>
+                        <div *ngIf="pwd?.errors?.pattern">
+                            Password should contain atleast one number and one letter.
+                        </div>
+</div>
+                    
+            
+
+<div class="container-login100-form-btn">
+<p>
+ <button type="button" class ="login100-form-btn"[disabled]="!ReactiveLogin.valid" (click) = "Check()" >Submit</button>
+              </p>
+    </div>
+    
+
+   
