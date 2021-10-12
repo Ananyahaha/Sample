@@ -8,7 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CartItemComponent implements OnInit {
 @Input() cartItem:any
   constructor() { }
-
+delete()
+{
+  
+}
   ngOnInit(): void {
   }
 

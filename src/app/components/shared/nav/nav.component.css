@@ -18,4 +18,35 @@ html {
   .card-deck .card {
     min-width: 220px;
   }
-  
+  .body {
+    background: white;
+    
+}
+a {
+    text-decoration: none; 
+    color: white; 
+}
+.rounded {
+    border-radius: 1rem
+}
+
+.nav-pills .nav-link {
+    color: #555
+}
+
+.nav-pills .nav-link.active {
+    color: white
+}
+
+input[type="radio"] {
+    margin-right: 5px
+}
+
+.dropdown-menu
+{
+  background-color: black;
+}
+.dropdown-item
+{
+  background-color: black;
+}

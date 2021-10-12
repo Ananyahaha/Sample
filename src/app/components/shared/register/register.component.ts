@@ -82,6 +82,7 @@ else{
   this.usercallservice.create(this.user);
   console.log(this.user);
   this.router.navigate(["/login"]);
+    alert("registration successfull")
 }
 
 }

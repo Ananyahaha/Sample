@@ -1,23 +1,31 @@
 
+<section class="vh-100 gradient-custom "  style =  "background: linear-gradient( rgba(17, 88, 103, 100), rgba(33, 37, 43, 0.1) ); 
+background-position: static;
+background-repeat: repeat;
+background-size: cover;
+height: 100%;
+padding-bottom: 1000px;
 
-<body>
-
-    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg'); background-repeat:repeat;">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-          <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+ ">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
     
 
     <H1>Sign Up</H1>
+    <p class="text-white-50 mb-5">Please enter your Email and password!</p>
+
         <form [formGroup]= "ReactiveLogin">
             
                  <div class="wrap-input100 validate-input">
                 
                     <div>
                         <p>
-                            <label for= "username">Enter Name:</label>
-                            <input class="input100" type="text" id="username"name="username" formControlName="name"  />
+                            <input class="input100" type="text" id="username"name="username" formControlName="name" placeholder=" Enter Name" />
                         </p>
                         <div *ngIf="!name?.valid">
                             <div *ngIf="name?.errors?.required && (name?.dirty ||name?.touched)">
@@ -27,8 +35,7 @@
                         </div>
                         <br>
                         <p>
-                            <label for= "email">Enter Email:</label>
-                            <input class="input100" type="text" id="email"name="email" formControlName="email"   />
+                            <input class="input100" type="text" id="email"name="email" formControlName="email" placeholder=" Enter Email"   />
                         </p>
                         <div *ngIf="!email?.valid">
                             <div *ngIf="email?.errors?.required && (email?.dirty ||email?.touched)">
@@ -43,8 +50,7 @@
                         <br>
                     
                         <p>
-                            <label for= "contact">Contact No:</label>
-                            <input class="input100" type="text" id="contact"name="contact" formControlName="contact"  />
+                            <input class="input100" type="text" id="contact"name="contact" formControlName="contact" placeholder=" Enter Contact Number" />
                         </p>
                         <div *ngIf="!contact?.valid">
                             <div *ngIf="contact!.errors?.required && (contact?.dirty ||contact?.touched)">
@@ -57,23 +63,26 @@
                         </div>
                         <br>
                         <p>
-                            <label for= "password">Enter Password:</label>
-                            <input class="input100" type="password" id="password"name="password" formControlName="pwd"  />
+                            <!-- <label for= "password">Enter Password </label> -->
+                            <input class="input100" type="password" id="password"name="password" formControlName="pwd" placeholder="Password" />
                         </p>
                         <div *ngIf="pwd?.errors?.required && (pwd?.dirty ||pwd?.touched)">
                             Password is mandatory.
                         </div>
                        
                         <div *ngIf="pwd!.errors?.minlength">
-                            Password should be of 8 digits
+                            Password should have minimum of 8 characters.
                             </div>
                             
                         <div *ngIf="pwd?.errors?.pattern">
-                            Password should contain atleast one number and one letter.
+                            Password should contain only  numbers and  letters.
                         </div>		
-                        <br>
+                        
+
                         <p>
-                            <input class="input100" type="password" id="Cpassword"name="Cpassword" formControlName="cwd"  placeholder="Confirm Password again"/>
+                            
+                            <!-- <label for= "Cpassword">Confirm Password</label> -->
+                            <input class="input100" type="password" id="Cpassword"name="Cpassword" formControlName="cwd"  placeholder="Confirm Password" />
                         </p>
                         <div *ngIf="cwd?.errors?.required && (cwd?.dirty ||cwd?.touched)">
                             Mandatory Field
@@ -82,8 +91,11 @@
                         
                         <div class="container-login100-form-btn">
                             <p>
-                             <button type="button" class ="login100-form-btn"[disabled]="!ReactiveLogin.valid" (click) = "Check()" >Submit</button>
-                             </p>
+                             <!-- <button type="button" class ="login100-form-btn"[disabled]="!ReactiveLogin.valid" (click) = "Check()" >Submit</button> -->
+                             <button class="btn btn-outline-light btn-lg px-5" type="submit" [disabled]="!ReactiveLogin.valid" (click) = "Check()">Register</button>
+
+                            </p>
+
                          </div>
                           
     
@@ -93,4 +105,10 @@
         </div>
         </form>
         </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
         
+        </section>

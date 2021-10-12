@@ -8,6 +8,7 @@ import { CartComponent } from './components/shared/shoppingcart/cart/cart.compon
 import { ProductListComponent } from './components/shared/shoppingcart/product-list/product-list.component';
 import { ShoppingcartComponent } from './components/shared/shoppingcart/shoppingcart.component';
 import { KidShoppingCartComponent } from './KidShoppingCart/kid-shopping-cart/kid-shopping-cart.component';
+import { ThanksComponent } from './thanks/thanks.component';
 import { WomencartComponent } from './womenShoppingCart/womencart/womencart.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
    {path:'checkout',component:CheckoutComponent},
    {path:'women',component:WomencartComponent},
    {path:'kids',component:KidShoppingCartComponent},
+   {path:'thanks',component:ThanksComponent}
 
 ];
 @NgModule({

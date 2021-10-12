@@ -1,22 +1,30 @@
-<body>
-    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg'); background-repeat:repeat;">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-          <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+<section class="vh-100 gradient-custom" style =  "background: linear-gradient( rgba(17, 88, 103, 100), rgba(33, 37, 43, 0.1) ); 
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100%;
+   padding-bottom: 750px;
+
+     ">
+
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem; ">
+          <div class="card-body p-5 text-center" >
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
 <h1>LOGIN</h1>
+<p class="text-white-50 mb-5">Please enter your Email and password!</p>
 
 <div class="box1">
-    <form [formGroup]= "ReactiveLogin">            
-            
+    <form [formGroup]= "ReactiveLogin">                
     <div>
-            
     <div class="login100-form-title">
-        
     </div>
-<div class="wrap-input100 validate-input">
-
-    <label for= "email">Email ID</label><br>
+<div class="wrap-input100 validate-input ">
+    <div class="form-outline form-white mb-4">
     <input class="input100" type="text" id="email"name="email" formControlName="email" placeholder="Email ID" style = "width: 300px;"/>
         <div *ngIf="!email?.valid">
         <div *ngIf="email?.errors?.required && (email?.dirty ||email?.touched)">
@@ -27,28 +35,42 @@
     </div>
 </div>
 </div>
-      <br>  
-<div class="wrap-input100 validate-input">
-            
-    <label for= "password">Password</label><br>
 
-            <input class = "input100" type="password" id="pasword" name="password" formControlName="pwd" placeholder="Password"/>
-            
+<div class="wrap-input100 validate-input">
+    <div class="form-outline form-white mb-4"></div>
+            <input class = "input100" type="password" id="pasword" name="password" formControlName="pwd" placeholder="Password" style = "width: 300px;"/>
                         <div *ngIf="pwd?.errors?.required && (pwd?.dirty ||pwd?.touched)">
                             Password is mandatory.
                         </div>
                         <div *ngIf="pwd?.errors?.pattern">
-                            Password should contain atleast one number and one letter.
+                            Password should contain only numbers and  letters.
                         </div>
 </div>
                     
             
-
+<br>
 <div class="container-login100-form-btn">
 <p>
- <button type="button" class ="login100-form-btn"[disabled]="!ReactiveLogin.valid" (click) = "Check()" >Submit</button>
-              </p>
+    <button class="btn btn-outline-light btn-lg px-5" type="submit" [disabled]="!ReactiveLogin.valid" (click) = "Check()" >Login</button>
+</p>
     </div>
+    
+    <a class="navbar-brand" href="" routerLink="/register">Sign Up</a>
+
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    </section>
+    
+
     
 
    

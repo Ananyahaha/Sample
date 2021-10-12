@@ -1,0 +1,18 @@
+
+<div style="margin-top: 100px; text-align: center;">
+    <h3>Your Order has been placed . Thank you for using our service. Happy Shopping. </h3>
+  </div>
+  <div class="feedback" style = "margin-left: 320px;">
+    
+    <br>
+      <p>Dear Customer,<br>
+          <br>
+      Thank you for using our Website. We would like to know how we performed. Please spare some moments to give us your valuable feedback as it will help us in improving our service.</p>
+            
+      <label for="feedbacktext">Please Enter your Feedback</label><br/><br/>
+      <textarea cols="75" name="commentText" rows="5"  [(ngModel)]='feedbackval'></textarea><br>
+      <br>
+        <div class="clear"></div> 
+      <input style="background:#43a7d5;color:#fff;padding:12px;border:0" type="submit" (click) = "submitfeedback()"value="Submit your review" routerLink = "/home"> 
+      
+  </div>

@@ -62,6 +62,9 @@ Check()
             console.log(this.user)
             localStorage.setItem("user",JSON.stringify(this.user));
             this.router.navigate(["/home"]);
+  
+            
+            alert("Successfully logged ")
         })
     
    

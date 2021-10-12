@@ -1,26 +1,17 @@
-form{
-
-    border: 3px black solid;
-    border-radius: 5px;
-    width: 350px;
-    margin: 50px 450px ;
-    padding: 20px 20px 20px;
-    background-color: rgb(255, 255, 255);
-}
-h1{
-    text-align: center;
-}    
 body{
-    background-color:grey}
+    background-color:grey
+  }
 
     form{
-
-        border: 3px black solid;
+        border: 3px;
         border-radius: 5px;
-        width: 350px;
-        margin: 50px ;
+       
         padding: 20px 20px 20px;
-        background-color: rgb(255, 255, 255);
+        background-color:#212529;
+    }
+    #password{
+      border-radius: 25px;
+      border: 2px
     }
     h1{
         text-align: center;
@@ -54,4 +45,8 @@ body{
         width: 50%;
         padding-bottom: 5%;
       }
-      
+      #vh-100 
+      {
+
+        background-color:greenyellow;
+      }

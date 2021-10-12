@@ -1,5 +1,20 @@
 <div class="cart-item">
-    <span>{{cartItem.productName}}</span> x
+
+    <!-- <span>{{cartItem.productName}}</span> x
     <span>{{cartItem.qty}}</span>:
-    <strong>{{cartItem.price* cartItem.qty | currency:'INR' }}</strong>
-  </div>
+    <strong>{{cartItem.price* cartItem.qty | currency:'INR' }}</strong> --> 
+    <!-- <i class="fa fa-trash" aria-hidden="true" (click)="delete()"></i> -->
+
+  <!-- </div> -->
+  <table class="table" style="padding-top:100px;">         
+        <tr>
+           <td> <span>{{cartItem.productName}}</span> </td>
+            <td ><span>{{cartItem.qty}}</span></td>
+            <td><span>{{cartItem.price | currency:'INR'}} </span></td>
+            <td><span>
+              {{cartItem.price* cartItem.qty | currency:'INR' }}</span>
+            </td>
+        </tr> 
+    
+</table>
+</div>

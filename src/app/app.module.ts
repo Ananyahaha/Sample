@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { ShoppingcartComponent } from './components/shared/shoppingcart/shoppingcart.component';
 import { CartComponent } from './components/shared/shoppingcart/cart/cart.component';
@@ -26,13 +25,15 @@ import { WomenListComponent } from './womenShoppingCart/womencart/women-list/wom
 import { KidShoppingCartComponent } from './KidShoppingCart/kid-shopping-cart/kid-shopping-cart.component';
 import { KidsCartItemComponent } from './KidShoppingCart/kids-cart-item/kids-cart-item.component';
 import { KidsCartListComponent } from './KidShoppingCart/kids-cart-list/kids-cart-list.component';
+import { ThanksComponent } from './thanks/thanks.component';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HeaderComponent,
-    FooterComponent,
     HomeComponent,
     ShoppingcartComponent,
     CartComponent,
@@ -50,14 +51,17 @@ import { KidsCartListComponent } from './KidShoppingCart/kids-cart-list/kids-car
     KidShoppingCartComponent,
     KidsCartItemComponent,
     KidsCartListComponent,
+    ThanksComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    FormsModule,
+      ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
